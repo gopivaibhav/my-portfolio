@@ -3,6 +3,7 @@ import displayVsCode from './components/apps/vscode';
 import { displayTerminal } from './components/apps/terminal';
 import { displaySettings } from './components/apps/settings';
 import { displayChrome } from './components/apps/chrome';
+import { displayMap } from './components/apps/map.js';
 import { displayTrash } from './components/apps/trash';
 import { displayGedit } from './components/apps/gedit';
 import { displayAboutGopi } from './components/apps/gopi';
@@ -19,6 +20,15 @@ const apps = [
         screen: displayChrome,
     },
     {
+        id: "map",
+        title: "My Location",
+        icon: './themes/Yaru/apps/gmap.png',
+        disabled: false,
+        favourite: true,
+        desktop_shortcut: true,
+        screen: displayMap,
+    },
+    {
         id: "calc",
         title: "Calculator",
         icon: './themes/Yaru/apps/calc.png',
@@ -29,7 +39,7 @@ const apps = [
     },
     {
         id: "about-gopi",
-        title: "About Gopi",
+        title: "About Me",
         icon: './themes/Yaru/system/user-home.png',
         disabled: false,
         favourite: true,
